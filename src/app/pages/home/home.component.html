@@ -1,0 +1,55 @@
+<div class="logo">
+    Tech Blog
+</div>
+
+<div class="post-container">
+    <mat-card *ngFor="let post of pageSlice" class="post-card">
+        <a routerLink="post/{{post.id}}">
+            <img mat-card-image class="post-image" src={{post.image}} alt="">
+            <mat-card-header>{{post.title}}</mat-card-header>
+            <mat-card-content>{{post.subtitle}}</mat-card-content>
+            <mat-card-footer>{{post.author}}</mat-card-footer>
+        </a>
+    </mat-card>
+    <mat-paginator #paginator class="blog-paginator" (page)="handlePageEvent($event)" [length]="length"
+        [pageSize]="pageSize" [showFirstLastButtons]="showFirstLastButtons"
+        [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []" [hidePageSize]="hidePageSize"
+        [pageIndex]="pageIndex">
+    </mat-paginator>
+</div>
+
+
+<div class="about-container row">
+    <div class="column">
+        <div class="about-image"></div>
+    </div>
+
+    <div class="column about-info">
+        <div class="about-header">ABOUT OUR BLOG</div>
+        <span class="about-text">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click
+            “Edit Text” or double
+            click
+            me to add your own content and make changes to the font. I’m a great place for you to tell a story and let
+            your
+            users know a little more about you.
+        </span>
+        <button mat-raised-button color="primary" class="about-button" (click)="goToVotes()">Learn More</button>
+    </div>
+</div>
+<div>
+    <div class="header">
+        FOLLOW ME ELSEWHERE
+    </div>
+    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
+    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
+    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
+    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
+    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
+    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
+    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
+</div>
+
+
+<div class="header">
+    SHOP MY LOOK
+</div>

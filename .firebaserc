@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-blog-ec5f2": {
+      "hosting": {
+        "Blog": [
+          "test-blog-ec5f2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-blog-ec5f2"
+  }
+}
