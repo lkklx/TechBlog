@@ -16,22 +16,34 @@
     flex-wrap: wrap;
     margin: 30px;
 }
-.blog-paginator{
+
+.blog-paginator {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.post-card{
+
+.post-card {
     max-width: 300px;
     border: 1px solid;
-    margin:15px;
+    margin: 15px;
     border-radius: 0;
-    a{
+
+    a:active,
+    a {
         text-decoration: none;
+        color:black;
+    }
+    a:hover{
+        color:grey;
     }
 }
-.post-image{
-    height:400px;
+.post-header {
+    font-size:20px;
+    margin-bottom:5px;
+}
+.post-image {
+    height: 400px;
 }
 
 // ABOUT block
@@ -41,44 +53,48 @@
 
 .row {
     display: flex;
-  }
-  
-  .column {
+}
+
+.column {
     flex: 50%;
     border: 1px solid;
-  }
+}
 
-  .about-text{
+.about-text {
     max-width: 420px;
-    padding-left:15px;
-    padding-right:15px;
-  }
-  .about-image {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about-image {
     background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&w=1000&q=80');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 1% bottom;
-    background-size:50% 100%;
+    background-size: 50% 100%;
     height: 648px;
     width: auto;
     z-index: -1;
     position: relative;
 }
-.about-info{
-    display:flex;
+
+.about-info {
+    display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
-.about-header{
+
+.about-header {
     display: flex;
     justify-content: center;
     font-size: 3em;
     padding: 15px 0 15px 0;
 }
-.about-button{
-    background-color:black;
-    color:white;
+
+.about-button {
+    background-color: black;
+    color: white;
     margin-top: 15px;
 }
 
@@ -100,4 +116,3 @@
     width: 200px;
     margin: 5px;
 }
-

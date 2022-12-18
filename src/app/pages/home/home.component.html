@@ -6,8 +6,8 @@
     <mat-card *ngFor="let post of pageSlice" class="post-card">
         <a routerLink="post/{{post.id}}">
             <img mat-card-image class="post-image" src={{post.image}} alt="">
-            <mat-card-header>{{post.title}}</mat-card-header>
-            <mat-card-content>{{post.subtitle}}</mat-card-content>
+            <mat-card-header class="post-header">{{post.title}}</mat-card-header>
+            <mat-card-content>{{post.subtitle}}</mat-card-content>   
             <mat-card-footer>{{post.author}}</mat-card-footer>
         </a>
     </mat-card>
@@ -33,7 +33,7 @@
             your
             users know a little more about you.
         </span>
-        <button mat-raised-button color="primary" class="about-button" (click)="goToVotes()">Learn More</button>
+        <button mat-raised-button color="primary" class="about-button" (click)="goToAbout()">Learn More</button>
     </div>
 </div>
 <div>

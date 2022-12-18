@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
     this.pageSlice = this.posts.slice(startIndex, endIndex);
   }
 
-  goToVotes =(myParam:string = 'about')=> {
+  goToAbout =(myParam:string = 'about')=> {
     const navigationDetails: string[] = [''];
     navigationDetails.push(myParam);
     this.router.navigate(navigationDetails);
