@@ -3,14 +3,14 @@
 </div>
 
 <div class="post-container">
-    <mat-card *ngFor="let post of pageSlice" class="post-card">
-        <!-- <a routerLink="post/{{post.id}}"> -->
+    <a *ngFor="let post of pageSlice" routerLink="post/{{post.id}}">
+        <mat-card class="post-card">
             <img mat-card-image class="post-image" src={{post.image}} alt="">
             <mat-card-header class="post-header">{{post.title}}</mat-card-header>
-            <mat-card-content class="post-subtiltle">{{post.subtitle}}</mat-card-content>   
-            <mat-card-footer class="post-footer">{{post.author}}</mat-card-footer>
-        <!-- </a> -->
-    </mat-card>
+            <mat-card-content class="post-subtiltle">{{post.subtitle}}</mat-card-content>
+            <mat-card-footer class="post-footer">{{post.author}}</mat-card-footer>s
+        </mat-card>
+    </a>
     <mat-paginator #paginator class="blog-paginator" (page)="handlePageEvent($event)" [length]="length"
         [pageSize]="pageSize" [showFirstLastButtons]="showFirstLastButtons"
         [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []" [hidePageSize]="hidePageSize"
