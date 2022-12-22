@@ -4,12 +4,12 @@
 
 <div class="post-container">
     <mat-card *ngFor="let post of pageSlice" class="post-card">
-        <a routerLink="post/{{post.id}}">
+        <!-- <a routerLink="post/{{post.id}}"> -->
             <img mat-card-image class="post-image" src={{post.image}} alt="">
             <mat-card-header class="post-header">{{post.title}}</mat-card-header>
-            <mat-card-content>{{post.subtitle}}</mat-card-content>   
-            <mat-card-footer>{{post.author}}</mat-card-footer>
-        </a>
+            <mat-card-content class="post-subtiltle">{{post.subtitle}}</mat-card-content>   
+            <mat-card-footer class="post-footer">{{post.author}}</mat-card-footer>
+        <!-- </a> -->
     </mat-card>
     <mat-paginator #paginator class="blog-paginator" (page)="handlePageEvent($event)" [length]="length"
         [pageSize]="pageSize" [showFirstLastButtons]="showFirstLastButtons"
@@ -17,7 +17,6 @@
         [pageIndex]="pageIndex">
     </mat-paginator>
 </div>
-
 
 <div class="about-container row">
     <div class="column">
@@ -36,6 +35,7 @@
         <button mat-raised-button color="primary" class="about-button" (click)="goToAbout()">Learn More</button>
     </div>
 </div>
+
 <div>
     <div class="header">
         FOLLOW ME ELSEWHERE
@@ -48,7 +48,6 @@
     <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
     <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" alt="" class="insta-images">
 </div>
-
 
 <div class="header">
     SHOP MY LOOK
