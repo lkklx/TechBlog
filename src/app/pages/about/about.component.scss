@@ -7,3 +7,25 @@
     margin-bottom: 30px;
     margin-top: 70px;
 }
+.about-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.about-image{
+    width:50%
+}
+.text-container{
+    padding-left:13%;
+    padding-right:13%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.about-header{
+    font-size:25pt;
+    padding-bottom: 15px;
+}
