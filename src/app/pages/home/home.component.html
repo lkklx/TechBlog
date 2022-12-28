@@ -8,7 +8,15 @@
             <img mat-card-image class="post-image" src={{post.image}} alt="">
             <mat-card-header class="post-header">{{post.title}}</mat-card-header>
             <mat-card-content class="post-subtitle">{{post.subtitle}}</mat-card-content>
-            <mat-card-footer class="post-footer">{{post.author}}</mat-card-footer>
+            <mat-card-footer class="post-footer">
+                <div class="footer-container">
+                    <div class="footer-view">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/techblog-b1240.appspot.com/o/images.png?alt=media&token=7736639b-2950-428a-9023-4c1b30aff45b" alt="" class="view-img">
+                        0
+                    </div>
+                    <div>author:{{post.author}}</div>
+                </div>
+            </mat-card-footer>
         </mat-card>
     </a>
     <mat-paginator #paginator class="blog-paginator" (page)="handlePageEvent($event)" [length]="length"

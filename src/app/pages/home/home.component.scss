@@ -25,8 +25,15 @@
 
     a:hover {
         color: grey;
+        .post-card{
+            color:gray;
+            box-shadow: 3px 3px rgba($color: #312264, $alpha: 1.0), -1em 0 .4em rgb(71, 2, 141);
+        }
         .post-footer:before{
             background:gray;
+        }
+        .view-img{
+            filter: invert(100%);
         }
     }
 }
@@ -40,9 +47,7 @@
 .post-card {
     max-width: 350px;
     height: 600px;
-    border: 1px solid;
     margin: 15px;
-    border-radius: 0;
     display: flex;
     flex-direction: column;
 }
@@ -58,15 +63,39 @@
         background: black;
         height: 2px;
         margin-bottom:5px;
-        width: 200px;
+        width: 300px;
         content:'';
+    }
+    .footer-container{
+        width: 100%;
+        display: flex;
+        justify-content:space-around;
+        .footer-view {
+            display: flex;
+            align-items:center;
+        }
+        .view-img{
+            height: 22px;
+            width: 27px;
+            margin-right: 5px;
+            filter: contrast(160%);
+        }
     }
 }
 
 .post-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 20px;
-    margin-bottom: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    height:55px;   
 }
+:host ::ng-deep .mat-card-header-text {
+    margin: 0;
+}
+
 
 .post-subtitle {
     
