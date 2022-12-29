@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
       this.pageSlice = res.slice(0, 4)
     })
   }
+
   pageSize = 4;
   pageIndex = 0;
   pageSizeOptions = [5, 10, 25];
@@ -33,7 +34,6 @@ export class HomeComponent implements OnInit {
   pageEvent!: PageEvent;
 
   handlePageEvent(e: PageEvent) {
-    console.log(e)
     const startIndex = e.pageIndex*e.pageSize;
     let endIndex = startIndex + e.pageSize;
     if (endIndex > this.length){
